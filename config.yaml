@@ -1,0 +1,7 @@
+accessKeyId: "your_access_key_id"
+accessKeySecret: "your_access_key_secret"
+regionId: "cn-hangzhou"
+domains:
+  - suffix: "aaaa:bbbb:cccc:dddd"
+    domain: "xxxx.com"
+    rr: "ip1"
