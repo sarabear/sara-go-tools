@@ -41,6 +41,12 @@ func main() {
 
 	for range ticker.C {
 		logInfo("定时任务执行中...")
+		ipv6Prefix = getLocalIPv6Prefix()
+		logInfo("本机IPv6前缀: %s", ipv6Prefix)
+		if ipv6Prefix == "" {
+			logWarn("未获取到本机IPv6地址，定时任务跳过。")
+			break
+		}
 		runOnce(client, config, ipv6Prefix)
 	}
 }

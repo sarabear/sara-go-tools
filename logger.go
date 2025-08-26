@@ -23,7 +23,7 @@ func initLogger(logDir string) {
 	// 配置日志轮转
 	lumberjackLogger := &lumberjack.Logger{
 		Filename:   filepath.Join(logDir, "ddns.log"),
-		MaxSize:    10,   // 每个日志文件最大10MB
+		MaxSize:    1,    // 每个日志文件最大1MB
 		MaxAge:     7,    // 保留7天
 		MaxBackups: 5,    // 最多保留5个备份文件
 		LocalTime:  true, // 使用本地时间
